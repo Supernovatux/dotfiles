@@ -1,0 +1,54 @@
+# NOTE: this example targets the master branch of i3status-rust.
+#
+# For latest stable version, refer to
+# https://github.com/greshake/i3status-rust/blob/v0.22.0/examples/config.toml
+
+icons_format = "{icon}"
+
+[theme]
+theme = "gruvbox-dark"
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[icons]
+icons = "awesome6"
+
+[[block]]
+block = "music"
+format = " $icon {$combo.rot-str(20) $play $next |}"
+
+[[block]]
+block = "net"
+format = " $icon $ip via $device "
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon root: $available.eng(2) "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_total_used_percents.eng(2) "
+format_alt = " $icon_swap $swap_used_percents.eng(2) "
+
+[[block]]
+block = "battery"
+device = "BAT0"
+driver = "upower"
+format = " $icon $percentage $time $power "
+full_format = " $icon $percentage "
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "time"
+interval = 5
+format = " %a %d/%m %R "
+

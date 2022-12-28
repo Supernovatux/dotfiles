@@ -1,0 +1,8 @@
+#!/bin/bash
+wal -i ~/.wallpaper/desk 
+oomox-cli -m all --hidpi true ~/.cache/wal/colors-oomox
+oomox-cli -m all --hidpi true /opt/wal/scripted_colors/xresources/xresources-reverse
+oomox-archdroid-icons-cli ~/.cache/wal/colors-oomox
+oomox-archdroid-icons-cli /opt/oomox/scripted_colors/xresources/xresources-reverse
+#oomox-gnome-colors-icons-cli ~/.cache/wal/colors-oomox
+pywal-discord
