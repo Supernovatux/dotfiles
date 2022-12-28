@@ -1,0 +1,15 @@
+#
+# ~/.bash_profile
+#
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export SDL_VIDEODRIVER=wayland
+    export MOZ_ENABLE_WAYLAND=1
+    export QT_QPA_PLATFORM=wayland
+    export CLUTTER_BACKEND=wayland
+    export SDL_AUDIODRIVER=pipewire
+fi
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/thulashitharan/.local/share/JetBrains/Toolbox/scripts"
