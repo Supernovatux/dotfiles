@@ -1,0 +1,9 @@
+[[manager.prepend_keymap]]
+desc = "Maximize or restore the preview pane"
+on = ["T"]
+run = "plugin --sync max-preview"
+
+[[manager.prepend_keymap]]
+desc = "Chmod on selected files"
+on = ["c", "m"]
+run = "plugin chmod"
